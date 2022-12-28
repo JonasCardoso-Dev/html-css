@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=3, initial-scale=1.0">
+    <title>Midias em HTML 5</title>
+</head>
+<body>
+    <H1>Imagem dinamica</H1>
+    <p>tente abrir esse site em varios dispositivos diferentes ou simplesmente aumente e diminua o tamanho do navegador</p>
+    <picture>
+        <!-- a ordem tem que ser da menor para maior. a imagem grande como base, acima da imagem da img src colar o source acima da imagem grande na ordem da menor para maior -->
+        <source media="(max-width: 750px)" srcset="img/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="img/foto-m.png" type="image/png">
+        <img src="img/foto-g.png" alt="imagem flexivel">
+    </picture>
+    
+    <h1>Reproduzindo audio</h1>
+    <p>vamos aprendera a reproduzir audio em HTML</p>
+    <audio src="midia/happy-mistake.mp3" controls autoplay></audio>
+    <!-- controls autoplay, coloca o controle do play -->
+
+    <h1>Outra forma de colocar audio</h1>
+    <p>essa forma é boa porque se nao der certo o tipo de audio o html tentar roda o proximo.</p>
+   <audio preload="metadata" autoplay controls>
+        <source src="midia/guanacast-33.mp3" type="audio/mpeg">
+        <source src="midia/guanacast-33.wav" type="audio/wav">
+       
+        <p>infelizmente nao consegui reproduzir audio <a href="midia/guanacast-33.mp3">clica aqui para baixa o audio</a></p>
+   </audio>
+<!-- o preload, tem o auto, metadata e o none. auto, ele so vai carregar o site quando o audio carregar tbm. metadata, ele carrega o site e o audio quando aberta play  -->
+<!-- obs.: quando for usar o source type, lembra de apagar o set de srcset se nao, nao vai funcionar -->
+<!-- voce pode colocar para ficar rodando em loop, basta colocar loop depois de controls -->
+<!-- evitar o arquivo wav, é muito grandes-->
+</body>
+</html>
